@@ -20,19 +20,20 @@
     </div>
 
     <div class="px-10 mx-auto">
-      <div class="w-2/3 text-center">
+      <div class="text-center">
         <h1
           class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white"
         >
           Download video and audio <br />
           from YouTube
         </h1>
+
         <label
           for="default-search"
           class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white"
           >Search</label
         >
-        <div class="relative">
+        <div class="relative sm:w-full md:w-2/3 mx-auto">
           <div
             class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none"
           >
@@ -329,10 +330,10 @@
           </svg>
           Youtube Downloader
         </a>
-        <p class="my-6 text-gray-500 dark:text-gray-400">
+        <!-- <p class="my-6 text-gray-500 dark:text-gray-400">
           Open-source library of over 400+ web components and interactive
           elements built for better web.
-        </p>
+        </p> -->
         <ul
           class="flex flex-wrap justify-center items-center mb-6 text-gray-900 dark:text-white"
         >
@@ -395,12 +396,9 @@
         search_control();
       }
     });
-
-    $("#search_container")
-      .$(".search_button")
-      .click(() => {
-        search_control();
-      });
+    $(".search_button").click(() => {
+      search_control();
+    });
 
     $.ajax({
       url: `https://convert2mp3s.com/api/single/mp4?url=https://www.youtube.com/watch?v=LwzHZpQ1IFM`,
@@ -410,9 +408,11 @@
       },
     });
   </script>
+
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.5.5/flowbite.css"
   />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.5.5/flowbite.js"></script>
+  
 </html>
